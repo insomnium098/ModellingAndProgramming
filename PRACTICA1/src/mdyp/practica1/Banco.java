@@ -95,8 +95,8 @@ public class Banco implements Sujeto {
             for (Servicio serv : serviciosCliente){
 
 
-                //Revisamos si el cliente tiene dinero, si tiene se le coba y se le avisa,
-                //Si no, se le envia un mensaje de advertencia
+                //Revisamos si el cliente tiene dinero, si tiene se le cobra y se le avisa,
+                //Si no, se le envia un mensaje de advertencia y no se le cobra.
 
                 if (cl.getDinero() - serv.getPrecio() >= 0){
                     cl.update("Cobrando: " + serv.getNombreServicio() + " " + serv.getTipoPaquete() +

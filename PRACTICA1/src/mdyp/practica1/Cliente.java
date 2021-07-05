@@ -38,6 +38,10 @@ public class Cliente implements Observador {
         return this.dinero;
     }
 
+    public void depositaDinero(Integer deposito){
+        this.dinero +=deposito;
+    }
+
     public ArrayList<Servicio> getListaServicios(){
         return this.listaServicios;
     }
@@ -54,18 +58,25 @@ public class Cliente implements Observador {
         listaServicios.remove(servicio);
     }
 
+    public void cancelarTodosLosServicios(){
+        this.listaServicios.clear();
+    }
+
     public void actualizaServicio(Servicio servicio){
 
         //Obtenemos el nombre del servicio y el tipo
+        String servAnterior = "";
 
         for (Servicio serv : listaServicios){
             if(serv.getNombreServicio().equals(servicio.getNombreServicio())){
+                servAnterior = serv.getTipoPaquete();
                 listaServicios.remove(serv);
                 break;
             }
         }
 
-        System.out.println("Actualizando servicio a " + servicio.getNombreServicio());
+        System.out.println("Actualizando servicio " + servicio.getNombreServicio() + " " +   servAnterior +
+                " a " + servicio.getTipoPaquete());
 
         agregaServicio(servicio);
 
