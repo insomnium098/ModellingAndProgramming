@@ -55,7 +55,19 @@ public class Cliente implements Observador {
     }
 
     public void actualizaServicio(Servicio servicio){
-        String nombreServicio = servicio.getNombreServicio();
+
+        //Obtenemos el nombre del servicio y el tipo
+
+        for (Servicio serv : listaServicios){
+            if(serv.getNombreServicio().equals(servicio.getNombreServicio())){
+                listaServicios.remove(serv);
+                break;
+            }
+        }
+
+        System.out.println("Actualizando servicio a " + servicio.getNombreServicio());
+
+        agregaServicio(servicio);
 
     }
 
