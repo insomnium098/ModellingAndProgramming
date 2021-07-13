@@ -2,13 +2,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MenuGeneral menu = new MenuGeneral();
+
+
+        MenuGeneral menuGeneral = new MenuGeneral();
         MenuDiario menuDiario = new MenuDiario();
         MenuEspecial menuEspecial = new MenuEspecial();
 
-        Iterator menuGeneral = menu.createIterator();
+        /*
+
+        Iterator menuGeneralit = menuGeneral.createIterator();
         System.out.println("------------Menu general:");
-        imprimeMenu(menuGeneral);
+        imprimeMenu(menuGeneralit);
 
         Iterator menuDiarioit = menuDiario.createIterator();
         System.out.println("------------Menu Diario:");
@@ -18,6 +22,20 @@ public class Main {
         System.out.println("------------Menu Especial:");
         imprimeMenu(menuEspecialit);
 
+         */
+
+
+        ///Comenzando Robot
+
+        Robot robot = new Robot(menuGeneral, menuDiario, menuEspecial);
+
+        //System.out.println("Imprimiendo desde el robot");
+        //robot.activarRobot();
+
+
+        //robot.clienteEligeMenu();
+
+        ///robot.suspenderRobot();
 
 
 

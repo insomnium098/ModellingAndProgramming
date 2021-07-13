@@ -9,11 +9,11 @@ public class MenuEspecial {
 
     public MenuEspecial(){
         this.elementosMenu = new Hashtable<>();
-        agregaElemento("1D","CangreBurguer","Hamburguesa especial directa de fondo de bikini",
+        agregaElemento("1E","CangreBurguer","Hamburguesa especial directa de fondo de bikini",
                 100, true, false);
-        agregaElemento("2D","MagickBurguer","Hamburguesa mágica (guiño, guiño)",
+        agregaElemento("2E","MagickBurguer","Hamburguesa mágica (guiño, guiño)",
                 150, true, false);
-        agregaElemento("3D","SuperHamburguesaVegana","Hamburguesa vegana extra grande sin gluten",
+        agregaElemento("3E","SuperHamburguesaVegana","Hamburguesa vegana extra grande sin gluten",
                 500, false, true);
 
     }

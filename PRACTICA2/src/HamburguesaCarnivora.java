@@ -1,12 +1,12 @@
 //package practica2;
 
-public class Hamburguesa1 extends Hamburguesa{
+public class HamburguesaCarnivora extends Hamburguesa{
     @Override
     void prepararCarne(){
         System.out.println("Preparamos carne normal");
     }
 
-    public Hamburguesa1(boolean llevaQueso){
+    public HamburguesaCarnivora(boolean llevaQueso){
         this.llevaQueso = llevaQueso;
     }
 
